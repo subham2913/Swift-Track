@@ -1,0 +1,16 @@
+:root {
+    --primary:#891652 ;
+    --secondary:#070F2B ;
+}
+
+/* :root represents the highest-level parent element in CSS, which in HTML terms is equivalent to the <html> element. */
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+
+
+/* The * selector applies the following styles to all elements in the document. */
+* {
+  font-family: "Montserrat", sans-serif !important;
+  font-size: 16px;
+}
+

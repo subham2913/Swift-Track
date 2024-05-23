@@ -1,0 +1,8 @@
+.auth{
+    background-color: var(--secondary);
+}
+
+/* var(--secondary): This is a CSS variable reference.
+It uses the var() function to insert the value of a CSS custom property named
+--secondary. CSS custom properties (or variables) allow you to define reusable
+values that can be used throughout your stylesheet. */
