@@ -1,8 +1,128 @@
-.auth{
-    background-color: var(--secondary);
+.password-strength {
+  margin-top: 8px;
+  height: 5px;
+  background-color: #e0e0e0;
+  border-radius: 3px;
+  overflow: hidden;
+  position: relative;
 }
 
-/* var(--secondary): This is a CSS variable reference.
+.password-strength .strength-bar {
+  height: 100%;
+  transition: width 0.3s;
+}
+
+.password-strength.weak .strength-bar {
+  background-color: #ff4d4f;
+}
+
+.password-strength.fair .strength-bar {
+  background-color: #ffec3d;
+}
+
+.password-strength.good .strength-bar {
+  background-color: #ffe58f;
+}
+
+.password-strength.strong .strength-bar {
+  background-color: #bae637;
+}
+
+.password-strength.very-strong .strength-bar {
+  background-color: #52c41a;
+}
+
+
+
+/* auth.css */
+/* 
+.auth {
+    background: url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap') no-repeat center center fixed;
+    background-size: cover;
+  }
+  
+  .card {
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+  }
+  
+  .text-lg {
+    color: #fff;
+    font-size: 24px;
+  }
+  
+  hr {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    background-color: rgba(255, 255, 255, 0.3);
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    color: #fff;
+  }
+  
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  input[type="password"]:focus {
+    outline: none;
+  }
+  
+  .secondary-btn {
+    background-color: rgba(50, 8, 8, 0.8);
+    color: #6e2424;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .secondary-btn:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+  
+  .secondary-btnn {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #852e2e;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .secondary-btnn:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+  
+  .primary-btn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .primary-btn:hover {
+    background-color: #0056b3;
+  } */
+  
+ .auth{
+    background-color: var(--secondary);
+ }
+ /* 
+var(--secondary): This is a CSS variable reference.
 It uses the var() function to insert the value of a CSS custom property named
 --secondary. CSS custom properties (or variables) allow you to define reusable
-values that can be used throughout your stylesheet. */
+values that can be used throughout your stylesheet.  */
+

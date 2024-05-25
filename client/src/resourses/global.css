@@ -1,4 +1,11 @@
 
+
+
+
+
+
+
+
 /* heights and width */
 
 .h-screen{
@@ -67,9 +74,9 @@ input{
   color:white;
   border:none;
   padding: 10px 20px;
-  cursor: pointer;
-  /* margin-right: 100px; */
-}
+  cursor: pointer; 
+  margin-right: 100px;
+ }
 
 
 .secondary-btn{
@@ -85,7 +92,7 @@ a{
   color: var(--primary) !important;
 }
 
-.spinner-parent {
+ .spinner-parent {
   position: absolute;
   top: 0;
   left: 0;
@@ -124,5 +131,5 @@ h1,p{
 
 button{
   border-radius: 0 !important;
-}
+} 
 
