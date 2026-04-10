@@ -76,25 +76,25 @@ function BookNow() {
       {bus && (
         <Row className="mt-3" gutter={[30, 30]}>
           <Col lg={12} xs={24} sm={24}>
-            <h1 className="text-2xl primary-text">{bus.name}</h1>
-            <h1 className="text-md">
+            <h1 className="text-2xl primary-text text-white">{bus.name}</h1>
+            <h1 className="text-md text-white">
               {bus.from} - {bus.to}
             </h1>
             <hr />
 
             <div className="flex flex-col gap-2">
-              <p className="text-md">Journey Date : {bus.journeyDate}</p>
-              <p className="text-md">Fare : $ {bus.fare} /-</p>
-              <p className="text-md">Departure Time : {bus.departure}</p>
-              <p className="text-md">Arrival Time : {bus.arrival}</p>
-              <p className="text-md">Capacity : {bus.capacity}</p>
-              <p className="text-md">
+              <p className="text-md text-white">Journey Date : {bus.journeyDate}</p>
+              <p className="text-md text-white">Fare : $ {bus.fare} /-</p>
+              <p className="text-md text-white">Departure Time : {bus.departure}</p>
+              <p className="text-md text-white">Arrival Time : {bus.arrival}</p>
+              <p className="text-md text-white">Capacity : {bus.capacity}</p>
+              <p className="text-md text-white">
                 Seats Left : {bus.capacity - bus.seatsBooked.length}
               </p>
             </div>
             <hr />
 
-            <div className="flex flex-col gap-2">
+            <div className="flex flex-col gap-2 text-white">
               <h1 className="text-2xl">
                 Selected Seats : {selectedSeats.join(", ")}
               </h1>

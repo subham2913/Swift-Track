@@ -22,7 +22,7 @@ import AdminBookings from "./pages/Admin/AdminBookings";
 function App() {
   const { loading } = useSelector((state) => state.alerts);
   return (
-    <div className="bg-blue-200 bg-opacity-50 backdrop-blur-lg backdrop-saturate-200 min-h-screen flex justify-center items-center" >
+    <div className="bg-blue-200 bg-opacity-50 backdrop-blur-lg backdrop-saturate-200 min-h-screen w-full">
       {loading && <Loader />}
       <BrowserRouter>
         <Routes>
