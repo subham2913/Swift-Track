@@ -1,10 +1,10 @@
 import { Col, message, Row } from "antd";
-import axios from "axios";
+
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Bus from "../components/Bus";
 import { HideLoading, ShowLoading } from "../redux/alertsSlice";
-
+import { axiosInstance } from "../helpers/axiosInstance";
 // ── Icons ──────────────────────────────────────────────────────────────────
 
 function BusIcon({ size = 18 }) {
@@ -120,38 +120,38 @@ function Home() {
 
   // ── Original logic — untouched ─────────────────────────────────────────
   const getBuses = async () => {
-    const tempFilters = {};
-    Object.keys(filters).forEach((key) => {
-      if (filters[key]) {
-        tempFilters[key] = filters[key];
-      }
-    });
-    try {
-      dispatch(ShowLoading());
-      const response = await axios.post(
-        "/api/buses/get-all-buses",
-        tempFilters,
-        {
-          headers: {
-            Authorization: `Bearer ${localStorage.getItem("token")}`,
-          },
-        }
-      );
-      dispatch(HideLoading());
-      if (response.data.success) {
-        setBuses(response.data.data);
-      } else {
-        message.error(response.data.message);
-      }
-    } catch (error) {
-      dispatch(HideLoading());
-      message.error(error.message);
+  const tempFilters = {};
+  Object.keys(filters).forEach((key) => {
+    if (filters[key]) {
+      tempFilters[key] = filters[key];
     }
-  };
+  });
 
-  useEffect(() => {
-    getBuses();
-  }, []);
+  try {
+    dispatch(ShowLoading());
+
+    const response = await axiosInstance.post(
+      "/api/buses/get-all-buses",
+      tempFilters
+    );
+
+    dispatch(HideLoading());
+
+    if (response.data.success) {
+      setBuses(response.data.data);
+    } else {
+      message.error(response.data.message);
+    }
+  } catch (error) {
+    dispatch(HideLoading());
+    message.error(error.message);
+  }
+};
+
+useEffect(() => {
+  getBuses();
+  // eslint-disable-next-line
+}, []);
   // ──────────────────────────────────────────────────────────────────────
 
   const activeFiltersCount = [filters.from, filters.to, filters.journeyDate].filter(Boolean).length;

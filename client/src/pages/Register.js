@@ -68,11 +68,11 @@ function GlassInput({ type, placeholder, onChange }) {
 // ── Password strength config ───────────────────────────────────────────────
 
 const STRENGTH_CONFIG = [
-  { label: "Very weak",  bar: "w-1/5", color: "bg-red-500" },
-  { label: "Weak",       bar: "w-2/5", color: "bg-orange-400" },
-  { label: "Fair",       bar: "w-3/5", color: "bg-yellow-400" },
-  { label: "Strong",     bar: "w-4/5", color: "bg-teal-400" },
-  { label: "Very strong",bar: "w-full", color: "bg-emerald-400" },
+  { label: "Very weak", bar: "w-1/5", color: "bg-red-500" },
+  { label: "Weak", bar: "w-2/5", color: "bg-orange-400" },
+  { label: "Fair", bar: "w-3/5", color: "bg-yellow-400" },
+  { label: "Strong", bar: "w-4/5", color: "bg-teal-400" },
+  { label: "Very strong", bar: "w-full", color: "bg-emerald-400" },
 ];
 
 function PasswordStrengthBar({ score }) {
@@ -129,7 +129,7 @@ const BENEFITS = [
 const STATS = [
   { val: "500+", label: "Routes" },
   { val: "50K+", label: "Travellers" },
-  { val: "99%",  label: "On Time" },
+  { val: "99%", label: "On Time" },
 ];
 
 // ── Main component ─────────────────────────────────────────────────────────
@@ -352,9 +352,19 @@ function Register() {
             {/* Footer */}
             <p className="text-center text-[0.7rem] mt-6 animate-fade-6 text-sky-900/70">
               By registering, you agree to our{" "}
-              <a href="#" className="text-sky-400/50 no-underline hover:underline">Terms</a>
-              {" "}and{" "}
-              <a href="#" className="text-sky-400/50 no-underline hover:underline">Privacy Policy</a>
+              <Link
+                to="/terms"
+                className="text-sky-400/50 no-underline hover:underline"
+              >
+                Terms
+              </Link>{" "}
+              and{" "}
+              <Link
+                to="/privacy"
+                className="text-sky-400/50 no-underline hover:underline"
+              >
+                Privacy Policy
+              </Link>
             </p>
 
           </div>

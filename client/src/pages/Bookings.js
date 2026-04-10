@@ -284,8 +284,8 @@ function Bookings() {
   };
 
   useEffect(() => {
-    getBookings();
-  }, []);
+  getBookings();
+}, [getBookings]);
 
   const componentRef = useRef();
 

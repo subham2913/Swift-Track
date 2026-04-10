@@ -1,6 +1,6 @@
-import React from "react";
+
 import { Form, message } from "antd";
-import { Link, useNavigate } from "react-router-dom";
+import { Link,  } from "react-router-dom";
 import axios from "axios";
 import { useDispatch } from "react-redux";
 import { HideLoading, ShowLoading } from "../redux/alertsSlice";
@@ -53,8 +53,8 @@ function GlassInput({ type, placeholder, value, onChange }) {
     <input
       type={type}
       placeholder={placeholder}
-      value={value}          
-      onChange={onChange}    
+      value={value}
+      onChange={onChange}
       className={[
         "w-full box-border rounded-xl px-4 py-3.5 text-sm outline-none transition-all duration-200",
         "bg-white/[0.06] border border-white/10 text-sky-100 placeholder-sky-900/60",
@@ -104,13 +104,13 @@ const FEATURES = [
 const STATS = [
   { val: "500+", label: "Routes" },
   { val: "50K+", label: "Travellers" },
-  { val: "99%",  label: "On Time" },
+  { val: "99%", label: "On Time" },
 ];
 
 // ── Main component ─────────────────────────────────────────────────────────
 
 function Login() {
-  const navigate = useNavigate();
+  //const navigate = useNavigate();
   const dispatch = useDispatch();
 
   const onFinish = async (values) => {
@@ -251,12 +251,16 @@ function Login() {
                 </div>
 
                 {/* Forgot password */}
-                <div className="flex justify-end mb-7 animate-fade-3">
-                  <a href="#" className="text-[0.75rem] text-sky-400/75 no-underline hover:underline transition-all">
-                    Forgot password?
-                  </a>
-                </div>
+                import {Link} from "react-router-dom";
 
+                <div className="flex justify-end mb-7 animate-fade-3">
+                  <Link
+                    to="/forgot-password"
+                    className="text-[0.75rem] text-sky-400/75 no-underline hover:underline transition-all"
+                  >
+                    Forgot password?
+                  </Link>
+                </div>
                 {/* Submit */}
                 <div className="animate-fade-4">
                   <button
@@ -296,9 +300,19 @@ function Login() {
             {/* Footer */}
             <p className="text-center text-[0.7rem] mt-6 animate-fade-6 text-sky-900/70">
               By signing in, you agree to our{" "}
-              <a href="#" className="text-sky-400/50 no-underline hover:underline">Terms</a>
-              {" "}and{" "}
-              <a href="#" className="text-sky-400/50 no-underline hover:underline">Privacy Policy</a>
+              <Link
+                to="/terms"
+                className="text-sky-400/50 no-underline hover:underline"
+              >
+                Terms
+              </Link>{" "}
+              and{" "}
+              <Link
+                to="/privacy"
+                className="text-sky-400/50 no-underline hover:underline"
+              >
+                Privacy Policy
+              </Link>
             </p>
 
           </div>
