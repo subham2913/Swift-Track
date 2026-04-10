@@ -1,0 +1,31 @@
+# dependencies
+node_modules/
+
+# env (VERY IMPORTANT)
+.env
+.env.*
+
+# logs
+logs
+*.log
+
+# runtime files
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# coverage
+coverage
+.nyc_output
+
+# build (if any)
+dist
+build
+
+# misc
+.DS_Store
+
+# editor
+.vscode
+.idea

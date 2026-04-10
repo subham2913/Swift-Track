@@ -1,0 +1,29 @@
+# dependencies
+node_modules/
+
+# build output
+dist
+build
+.next
+out
+
+# env files
+.env
+.env.*
+
+# logs
+*.log
+
+# cache
+.cache
+.parcel-cache
+.nyc_output
+coverage
+
+# misc
+.DS_Store
+*.tsbuildinfo
+
+# editor
+.vscode
+.idea
