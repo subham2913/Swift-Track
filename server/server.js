@@ -9,7 +9,7 @@ const dbConfig = require("./config/dbConfig");
 app.use(express.json());
 app.use(cors({
   origin: "https://swift-track-f8xz.vercel.app/",
-  methods: ["GET", "POST", "PUT", "DELETE"],
+  
   credentials: true
 }));
 
