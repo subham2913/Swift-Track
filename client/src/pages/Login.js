@@ -1,4 +1,4 @@
-
+import { axiosInstance } from "../helpers/axiosInstance";
 import { Form, message } from "antd";
 import { Link,  } from "react-router-dom";
 import axios from "axios";
@@ -116,7 +116,7 @@ function Login() {
   const onFinish = async (values) => {
     try {
       dispatch(ShowLoading());
-      const response = await axios.post("/api/users/login", values);
+      const response = await axiosInstance.post("/api/users/login", values);
       dispatch(HideLoading());
       if (response.data.success) {
         message.success(response.data.message);
@@ -251,7 +251,7 @@ function Login() {
                 </div>
 
                 {/* Forgot password */}
-                import {Link} from "react-router-dom";
+                
 
                 <div className="flex justify-end mb-7 animate-fade-3">
                   <Link

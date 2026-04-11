@@ -8,9 +8,8 @@ const dbConfig = require("./config/dbConfig");
 // Middleware
 app.use(express.json());
 app.use(cors({
-  origin: "https://swift-track-f8xz.vercel.app/",
-  
-  credentials: true
+  origin: true,
+  credentials: true,
 }));
 
 // Routes
@@ -27,8 +26,5 @@ app.get("/", (req, res) => {
   res.send("API is running...");
 });
 
-// Port
 const port = process.env.PORT || 5000;
-
-// Start server
 app.listen(port, () => console.log(`Server running on ${port}`));
